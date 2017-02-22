@@ -1,4 +1,4 @@
-FROM kibana:4.1
+FROM kibana:5.2
 
 RUN apt-get update
 

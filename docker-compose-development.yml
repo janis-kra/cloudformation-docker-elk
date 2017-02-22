@@ -1,11 +1,11 @@
 elasticsearch:
-  image: elasticsearch:1.5
+  image: elasticsearch:5.2
   command: elasticsearch -Des.network.host=0.0.0.0
   ports:
     - "9200:9200"
     - "9300:9300"
 logstash:
-  image: logstash:2.3
+  image: logstash:5.2
   command: logstash -f /etc/logstash/conf.d/ --allow-env --verbose
   volumes:
     - ./logstash/config:/etc/logstash/conf.d
